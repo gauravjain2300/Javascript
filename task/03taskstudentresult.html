@@ -7,7 +7,7 @@
     <style>
       div {
         background-color: brown;
-        border: 1px solid white;
+        border: 10px solid black;
         color: white;
         font-weight: 900;
         height: 90vh;
@@ -17,37 +17,53 @@
         width: 50%;
         height: 50px;
         background-color: black;
-        border: 1px solid white;
+        border: 5px solid white;
         color: white;
+      }
+
+      button {
+        width: 100px;
+        border-radius: 20px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        border: 3px solid white;
+        /* padding-top: 50px; */
+        margin-top: 50px;
       }
     </style>
   </head>
   <body>
     <div>
       <h1>Student Result</h1>
-      
+
       <input type="text" value="" id="Marks" placeholder="Marks" />
+      <br />
+      <button id="result" onclick="pass()">show</button>
     </div>
-    
 
     <script>
-      function a() {
+      function pass() {
         let a = document.getElementById("Marks").value;
+
+        // document.getElementById("result").value = total;
 
         // document.getElementById("Marks").value;
 
-        if (a == 1) {
-          alert("Try again");
-        } else if (result == 2) {
-          alert("Two");
-        } else if (result == 3) {
-          alert("Three");
-        } else if (result == 4) {
-          alert("Four");
-        } else {
-          alert("gg");
-        }
+        if (a >= 33 && a <= 50) {
+          alert("Pass");
+        } else if (a >= 51 && a <= 60) {
+          alert("third");
+        } else if (a >= 61 && a <= 70) {
+          alert("second class");
+        } else if (a >= 71 && a <= 80) {
+          alert("First class");
+        } else if (a >= 81 && a <= 90) {
+          alert("Distinction class");
+        } else if (a >= 81 && a <= 90) alert("Distinction class+");
+        else if (a >= 91 && a <= 100) alert("Distinction class++");
+        alert("Try again");
       }
-
+    </script>
   </body>
 </html>

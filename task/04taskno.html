@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: antiquewhite;
+
+        margin: 0 auto;
+        text-align: center;
+      }
+      #converter {
+        width: 800px;
+        height: 80px;
+        background-color: brown;
+        margin-top: 50px;
+        color: white;
+        border: 10px solid white;
+      }
+      .Text-Converter {
+        border: 10px solid black;
+        /* height: 200px; */
+      }
+      button {
+        width: 200px;
+        border-radius: 20px;
+        /* padding-top: 50px; */
+        margin-top: 50px;
+        height: 50px;
+        margin-bottom: 50px;
+        background-color: black;
+        color: white;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="Text-Converter">
+        <input type="text" id="converter" placeholder="Text converter" />
+        <br />
+
+        <button onclick="uppercase()" id="Text">Upper case</button>
+        <button onclick="lowercase()" id="Text">Lower case</button>
+        <button onclick="Clear()" id="Text">Clear</button>
+        <button onclick="trim()" id="Text">Trim</button>
+        <br />
+        <button onclick="WordCount()" id="Text">Word Count</button>
+        <button onclick="SpaceRemove()" id="Text">Space Remove</button>
+        <button onclick="CharcterCount()" id="Text">Charcter Count</button>
+        <button onclick="FindandReplace()" id="Text">Find and Replace</button>
+      </div>
+    </div>
+
+    <script>
+      function uppercase() {
+        let a = document.getElementById("converter").value;
+
+        document.getElementById("converter").value = a.toUpperCase("");
+      }
+      function lowercase() {
+        let a = document.getElementById("converter").value;
+
+        document.getElementById("converter").value = a.toLowerCase("");
+      }
+
+      function Clear() {
+        let a = document.getElementById("converter").innerHTML;
+
+        // let total = log(a.toUpperCase());
+        let gaurav = a.toUpperCase();
+        document.getElementById("converter").value = gaurav;
+      }
+
+      function trim() {
+        let a = document.getElementById("converter").value;
+
+        document.getElementById("converter").value = a.trim("");
+      }
+
+      function SpaceRemove() {
+        let a = document.getElementById("converter").value;
+
+        document.getElementById("converter").value = a.replace(/\s+/g, "");
+      }
+
+      function WordCount() {
+        let a = document.getElementById("converter").value;
+
+        document.getElementById("converter").value = a.wordsLen(a);
+      }
+    </script>
+  </body>
+</html>
