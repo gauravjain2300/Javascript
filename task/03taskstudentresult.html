@@ -6,7 +6,10 @@
     <title>Document</title>
     <style>
       div {
-        background-color: brown;
+        /* background-color: brown; */
+        background-image: url(../images/pexels-philippe-donn-1114690.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
         border: 10px solid black;
         color: white;
         font-weight: 900;
@@ -19,6 +22,7 @@
         background-color: black;
         border: 5px solid white;
         color: white;
+        font-weight: 900;
       }
 
       button {
@@ -62,7 +66,9 @@
           alert("Distinction class");
         } else if (a >= 81 && a <= 90) alert("Distinction class+");
         else if (a >= 91 && a <= 100) alert("Distinction class++");
-        alert("Try again");
+        else {
+          alert("Try again");
+        }
       }
     </script>
   </body>

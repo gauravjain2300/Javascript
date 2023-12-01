@@ -6,8 +6,11 @@
     <title>Document</title>
     <style>
       .box {
-        background-color: antiquewhite;
-
+        /* background-color: antiquewhite; */
+        background-image: url(../images/bg-9-full.jpg);
+        background-image: url(../images/Huge-Backgrounds-63.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         margin: 0 auto;
         text-align: center;
       }
@@ -16,23 +19,51 @@
         height: 80px;
         background-color: brown;
         margin-top: 50px;
+        font-weight: 900;
         color: white;
         border: 10px solid white;
       }
       .Text-Converter {
         border: 10px solid black;
-        /* height: 200px; */
       }
       button {
         width: 200px;
         border-radius: 20px;
-        /* padding-top: 50px; */
+
         margin-top: 50px;
         height: 50px;
         margin-bottom: 50px;
         background-color: black;
         color: white;
         font-weight: 900;
+      }
+      #result {
+        width: 800px;
+
+        border-radius: 20px;
+        background-color: grey;
+        color: white;
+        border: 5px solid black;
+
+        padding: 30px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #replace {
+        width: 390px;
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      #find {
+        width: 390px;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: silver;
       }
     </style>
   </head>
@@ -47,10 +78,15 @@
         <button onclick="Clear()" id="Text">Clear</button>
         <button onclick="trim()" id="Text">Trim</button>
         <br />
-        <button onclick="WordCount()" id="Text">Word Count</button>
+        <button onclick="wordCount()" id="Text">Word Count</button>
         <button onclick="SpaceRemove()" id="Text">Space Remove</button>
         <button onclick="CharcterCount()" id="Text">Charcter Count</button>
         <button onclick="FindandReplace()" id="Text">Find and Replace</button>
+        <br />
+        <input type="text" id="result" placeholder="result" />
+        <br />
+        <input type="text" id="find" placeholder="Find" />
+        <input type="text" id="replace" placeholder="Replace" />
       </div>
     </div>
 
@@ -66,14 +102,6 @@
         document.getElementById("converter").value = a.toLowerCase("");
       }
 
-      function Clear() {
-        let a = document.getElementById("converter").innerHTML;
-
-        // let total = log(a.toUpperCase());
-        let gaurav = a.toUpperCase();
-        document.getElementById("converter").value = gaurav;
-      }
-
       function trim() {
         let a = document.getElementById("converter").value;
 
@@ -86,10 +114,29 @@
         document.getElementById("converter").value = a.replace(/\s+/g, "");
       }
 
-      function WordCount() {
+      function wordCount() {
         let a = document.getElementById("converter").value;
 
-        document.getElementById("converter").value = a.wordsLen(a);
+        let total = a.split(" ").length;
+        document.getElementById("result").value = total;
+      }
+
+      function CharcterCount() {
+        let a = document.getElementById("converter").value;
+
+        let total = Number(a.length);
+        document.getElementById("result").value = total;
+      }
+
+      function FindandReplace() {
+        let a = document.getElementById("converter").value;
+        let find = document.getElementById("find").value;
+        let replace = document.getElementById("replace").value;
+
+        document.getElementById("converter").value = a.replaceAll(
+          find,
+          replace
+        );
       }
     </script>
   </body>

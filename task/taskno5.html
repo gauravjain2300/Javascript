@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        /* text-align: center; */
+
+        padding-top: 20px;
+        width: 50%;
+
+        background-image: url(../images/9AZKH1.jpg);
+        background-size: cover;
+        height: 500px;
+      }
+      fieldset {
+        color: white;
+        font-weight: 900;
+        height: 300px;
+      }
+      label {
+        color: white;
+        font-weight: 900;
+      }
+      /* #username {
+        /* padding-top: 50px; */
+      /* margin-top: 50px; 
+        margin-bottom: 50px;
+      } */
+      input {
+        margin-top: 50px;
+      }
+      button {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <form action="" onsubmit="validateForm">
+          <fieldset>
+            <legend>Personal informaion</legend>
+            <label for="">User name:-</label>
+            <input type="text" id="username" placeholder="Username" />
+            <br />
+
+            <label for="">Emailid:-</label>
+            <input type="text" id="emailid" placeholder="Emailid" />
+            <br />
+            <label for="">Password:-</label>
+            <input type="password" id="" placeholder="Password" />
+            <br />
+            <button>sumbit</button>
+            <button class="Clear">Reset</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        let name = document.getElementById("username").value;
+        let email = document.getElementById("emailid").value;
+        let pass = document.getElementById("Password").value;
+        // let phone_no = document.getElementById("mobile_num").value;
+
+        // username
+        if (name == null || name == "") {
+          document.getElementById("username").innerText = "* Name is required.";
+        }
+        // password
+        if (pass == null || pass == "") {
+          document.getElementById("pasword_span").innerText =
+            "* password is required.";
+        }
+        // email
+        if (email == null || name == "") {
+          document.getElementById("emailid").innerText = "* email is required.";
+        }
+        // phone no
+        // if (phone_no == null || phone_no == "") {
+        //   document.getElementById("mn").innerText =
+        //     "* phone number is required.";
+        // }
+      }
+    </script>
+  </body>
+</html>
