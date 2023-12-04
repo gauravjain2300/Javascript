@@ -11,17 +11,17 @@
         padding-top: 20px;
         width: 50%;
 
-        background-image: url(../images/9AZKH1.jpg);
+        /* background-image: url(../images/symbol-scatter-haikei.png); */
         background-size: cover;
         height: 500px;
       }
       fieldset {
-        color: white;
+        /* color: white; */
         font-weight: 900;
         height: 300px;
       }
       label {
-        color: white;
+        /* color: white; */
         font-weight: 900;
       }
       /* #username {
@@ -35,23 +35,58 @@
       button {
         margin-top: 20px;
       }
+      span {
+        color: red;
+      }
     </style>
   </head>
   <body>
     <div>
       <div>
-        <form action="" onsubmit="validateForm">
+        <form action="" onclick="validateFormname">
           <fieldset>
             <legend>Personal informaion</legend>
             <label for="">User name:-</label>
-            <input type="text" id="username" placeholder="Username" />
+            <input
+              type="text"
+              id="username"
+              placeholder="Username"
+              value=""
+              onblur="validateFormname()"
+            />
+            <span id="mobile"></span>
             <br />
 
             <label for="">Emailid:-</label>
-            <input type="text" id="emailid" placeholder="Emailid" />
+            <input
+              type="text"
+              id="emailid"
+              placeholder="Emailid"
+              value=""
+              onblur="validateformemailid()"
+            />
+            <span id="mobile-2"></span>
             <br />
             <label for="">Password:-</label>
-            <input type="password" id="" placeholder="Password" />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              value=""
+              onblur="validationformpassword()"
+            />
+            <span id="mobile-3"></span>
+            <br />
+
+            <label for="">phone no:</label>
+            <input
+              type="number"
+              id="number"
+              placeholder="NUmber"
+              value=""
+              onblur="validationformNumber()"
+            />
+            <span id="mobile-4"></span>
             <br />
             <button>sumbit</button>
             <button class="Clear">Reset</button>
@@ -61,30 +96,40 @@
     </div>
 
     <script>
-      function validateForm() {
-        let name = document.getElementById("username").value;
-        let email = document.getElementById("emailid").value;
-        let pass = document.getElementById("Password").value;
-        // let phone_no = document.getElementById("mobile_num").value;
+      function validateFormname() {
+        let Username = document.getElementById("username").value;
 
-        // username
-        if (name == null || name == "") {
-          document.getElementById("username").innerText = "* Name is required.";
+        if (Username == "") {
+          document.getElementById("mobile").innerText =
+            "*please fill your name";
         }
-        // password
-        if (pass == null || pass == "") {
-          document.getElementById("pasword_span").innerText =
-            "* password is required.";
+      }
+
+      function validateformemailid() {
+        let Useremail = document.getElementById("emailid").value;
+
+        if (Useremail == "") {
+          document.getElementById("mobile-2").innerText =
+            "*pleasse fill the email id";
         }
-        // email
-        if (email == null || name == "") {
-          document.getElementById("emailid").innerText = "* email is required.";
+      }
+
+      function validationformpassword() {
+        let userpassword = document.getElementById("password").value;
+
+        if (userpassword == "") {
+          document.getElementById("mobile-3").innerText =
+            "*pleasse fill the password";
         }
-        // phone no
-        // if (phone_no == null || phone_no == "") {
-        //   document.getElementById("mn").innerText =
-        //     "* phone number is required.";
-        // }
+      }
+
+      function validationformNumber() {
+        let phonenumber = document.getElementById("number").value;
+
+        if (phonenumber == "") {
+          document.getElementById("mobile-4").innerText =
+            "*Please enter your name";
+        }
       }
     </script>
   </body>
