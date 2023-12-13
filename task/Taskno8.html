@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>instagram log in page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
    <style>
         *{padding: 0;
@@ -11,10 +12,13 @@
     box-sizing: border-box;}
         .container{margin: 0 auto;}
         .border{height: 400px;
-        width: 400px;
+        width: 380px;
+        position: relative;
     border: 1px solid black;
 margin: 0 auto;
-text-align: center;}
+text-align: center;
+
+}
 
 
 img{width: 40%;
@@ -27,26 +31,91 @@ padding-bottom: 30px;}
     height: 40px;
 margin-bottom: 5px;
 
-/*     
-    display: flex;
-    flex: 1 0 0px; */
     font: inherit;
     font-size: 100%;
     height: 36px;
-    /* margin: 0; */
-    min-width: 0;
-    /* padding: 0; */
-    position: relative;
-    vertical-align: baseline;
     
+    min-width: 0;
+    background: rgb(var(--ig-secondary-background));
+    
+    flex: 1 0 auto;
+    margin-bottom: 5px;
+     padding: 9px 0 7px 8px;
+    text-overflow: ellipsis;
+vertical-align: baseline;
+border: 1px solid black;
 }
+
+#password{width: 70%;
+height: 40px;padding: 9px 0 7px 8px;
+border: 1px solid black;}
+
+#show{position: absolute;
+left: 270px;
+top: 160px;
+display: none
+
+;
+
+}
+
+
+
+
+
+
 #Login{width: 60%;
    background-color: rgba(var(--ig-primary-button));
     opacity: .7;
 }
-#password{width: 70%;
-height: 40px;}
+.container{padding-top: 80px;}
+#Login{margin-top: 10px;
+width: 70%;
+border-radius: 10px;
+height: 30px;
+background-color: rgb(0, 149, 246);
+border: 0px;
+font-weight: 700;
+color: white;
+
+background-color: rgba();
+    opacity: 1;
+margin-bottom: 15px;}
    
+.facebook{
+    color: #385185;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-weight: 800;
+    
+}
+span{font-weight: 50;}
+
+
+
+
+
+
+
+
+.ab1{align-items: center;
+    background-color: rgb(var(--ig-primary-background));
+    border: 1px solid rgb(var(--ig-elevated-separator));
+    border-radius: 1px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0 0 10px;
+    padding: 10px 0;
+    position: relative;
+    vertical-align:baseline
+} 
    </style>
   </head>
   <body>
@@ -56,15 +125,31 @@ height: 40px;}
             <div class="border">
                 <img src="../images/Instagram_logo.svg.png" alt="">
                 <div>
-                    <input type="text" placeholder="Phone number, user name, or email" id="username">
+                    <form action="">
+                    <input type="text" placeholder="Phone number, user name, or email" id="username" onclick="username()">
                     <br>
-                    <input type="password" placeholder="password" id="password">
+                    <input type="password" placeholder="password" id="password" onclick="
+                    pass()" >
+                    <span id="show" onclick="show()">Show</span>
                     <button id="Login"> Log in</button>
+                </form>
 
+                    <p>------- OR ------</p>
+                  
                 </div>
-
+                <div class="facebook">
+                     <i class="fa-brands fa-square-facebook"></i> 
+                     <p>Log in with facebook</p>
+                    
+                </div>
+<div>
+    <span>Forgot password?</span>
+</div>
             </div>
 
+
+
+            <div class="ab1">Don't have an account</div>
         </div>
 
         </div>
@@ -72,7 +157,41 @@ height: 40px;}
     </div>
 
 
+<script>
+    // document.getElementById("show").style.display="none";
+    function pass()
+    {
+    
+        document.getElementById("show").style.display="block";
 
+    }
+    function show()
+    {
+  let userp=document.getElementById("password");
+
+    if(userp.type==="password")
+        {  
+
+            userp.type="text";
+            document.getElementById("show").innerText="hide"
+        }
+       else
+       {
+        userp.type="password";
+        document.getElementById("show").innerText="show"
+
+
+       }
+
+     
+}
+
+function username(){
+    
+
+}
+    
+</script>
 
   </body>
 </html>
