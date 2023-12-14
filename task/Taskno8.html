@@ -53,9 +53,8 @@ border: 1px solid black;}
 #show{position: absolute;
 left: 270px;
 top: 160px;
-display: none
-
-;
+display: none;
+cursor: pointer;
 
 }
 
@@ -126,6 +125,7 @@ span{font-weight: 50;}
                 <img src="../images/Instagram_logo.svg.png" alt="">
                 <div>
                     <form action="">
+                    <label for="username"></label>
                     <input type="text" placeholder="Phone number, user name, or email" id="username" onclick="username()">
                     <br>
                     <input type="password" placeholder="password" id="password" onclick="
@@ -173,7 +173,7 @@ span{font-weight: 50;}
         {  
 
             userp.type="text";
-            document.getElementById("show").innerText="hide"
+            document.getElementById("show").innerText="Hide"
         }
        else
        {
@@ -186,10 +186,9 @@ span{font-weight: 50;}
      
 }
 
-function username(){
-    
 
-}
+
+
     
 </script>
 
