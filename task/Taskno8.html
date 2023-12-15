@@ -100,21 +100,24 @@ span{font-weight: 50;}
 
 
 
-.ab1{align-items: center;
-    background-color: rgb(var(--ig-primary-background));
-    border: 1px solid rgb(var(--ig-elevated-separator));
-    border-radius: 1px;
-    box-sizing: border-box;
+.ab1+div{display: flex;}
+p+span{
+    color: blue;
+}
+.ab1{
+    border: 1px solid black;
+    width: 200px;
+    
     display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    font: inherit;
-    font-size: 100%;
-    margin: 0 0 10px;
-    padding: 10px 0;
-    position: relative;
-    vertical-align:baseline
-} 
+    justify-content: center;
+    text-align: center;
+}
+.ab2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
    </style>
   </head>
   <body>
@@ -149,10 +152,12 @@ span{font-weight: 50;}
 
 
 
-            <div class="ab1">Don't have an account</div>
+            <div class="ab1">
+                <div class="ab2"><p>Don't have an account?</p> <span>Sign up</span></div></div>
         </div>
 
         </div>
+
 
     </div>
 
@@ -185,7 +190,6 @@ span{font-weight: 50;}
 
      
 }
-
 
 
 
