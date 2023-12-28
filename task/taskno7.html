@@ -32,28 +32,28 @@
   <body>
     <div id="container">
       <h3>Light and Dark Mode</h3>
-      <button onclick="darkmode()">Switch mode</button>
+      <button onclick="darkmode()">Dark mode</button>
       <button onclick="lightmode()">lightmode</button>
     </div>
     <script>
-      //   function darkmode() {
-      //     document.getElementById("container").style.backgroundColor = "black";
-      //   }
-
-      //   function lightmode() {
-      //     document.getElementById("container").style.backgroundColor = "white";
-      //   }
-
       function darkmode() {
-        let a = (document.getElementById("container").style.backgroundColor =
-          "black");
-        let b = (document.getElementById("container").style.backgroundColor =
-          "white");
-
-        if (condition) {
-        } else {
-        }
+        document.getElementById("container").style.backgroundColor = "black";
       }
+
+      function lightmode() {
+        document.getElementById("container").style.backgroundColor = "white";
+      } 
+
+      // function darkmode() {
+      //   let a = (document.getElementById("container").style.backgroundColor =
+      //     "black");
+      //   let b = (document.getElementById("container").style.backgroundColor =
+      //     "white");
+
+      //   if (condition) {
+      //   } else {
+      //   }
+      // }
     </script>
   </body>
 </html>
