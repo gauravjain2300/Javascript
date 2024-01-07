@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box1 {
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        background-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="box1"></div>
+      <button onclick="change()">colour</button>
+      <button ondblclick="blue()">Blue</button>
+    </div>
+
+    <script>
+      a =
+        document.getElementById("box1").backgroundColor[
+          ("blue", "red", "crimson", "white")
+        ];
+
+      function change() {
+        document.getElementById("box1").value = a;
+      }
+
+      function blue() {
+        document.getElementById("box1").style.backgroundColor = "blue";
+      }
+    </script>
+  </body>
+</html>
