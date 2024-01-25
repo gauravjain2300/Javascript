@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  background-color: white;
+  /* border: 1px solid white; */
+  box-shadow: 1px 0px 5px black;
+  /* padding-left: 30px;     */
+}
+
+.list-style-1 {
+  display: flex;
+  list-style: none;
+  gap: 120px;
+}
+.myntraimage {
+  width: 5%;
+  list-style: none;
+}
+.list-style {
+  display: flex;
+  list-style: none;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  /*  */
+}
+.placeholder {
+  align-items: center;
+  display: flex;
+  gap: 0px;
+}
+.search-products {
+  border: 0px;
+  width: 400px;
+  height: 50px;
+  /* background-color: lightblue; */
+}
+/* .placeholder i {
+  background-color: lightblue;
+  height: 0px;
+} */
+
+.wish-lists {
+  display: flex;
+  text-align: center;
+  gap: 20px;
+  align-items: center;
+}
+.second-nav {
+  display: flex;
+  font-weight: 400;
+  gap: 10px;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+.Nav-2 p {
+  padding-top: 20px;
+
+  padding-left: 30px;
+  font-weight: 700;
+  font-size: 17px;
+  padding-bottom: 20px;
+}
+.third-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Add-ons {
+  display: flex;
+  gap: 30px;
+  opacity: 0.7;
+}
+
+#recomanded {
+  /* height: 0px; */
+  width: 200px;
+  height: 30px;
+  align-self: center;
+}
+.BRAND {
+  width: 20%;
+  position: fixed;
+
+  left: 0px;
+  height: 100%;
+  border: 1px solid black;
+  padding-left: 40px;
+  background-color: white;
+}
+
+.checkbox {
+  list-style: none;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.BRAND div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-top: 20px;
+  gap: 100px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      div {
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+      #Date {
+        height: 40px;
+        /* width: 50%; */
+        /* padding-top: 50px; */
+        margin-top: 50px;
+      }
+      #btn-1 {
+        background-color: aliceblue;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="date" value="" id="gaurav" />
+      <br />
+
+      <button onclick="alert()" id="btn-1">alert</button>
+    </div>
+
+    <script>
+      // function alert() {
+      //   let a = document.getElementById("gaurav").value;
+      //   console.log(typeof a);
+      //   // alert('alert')
+
+      //   if (gaurav == "") {
+      //     document.getElementById("gaurav") = value;
+
+      //   }
+      //   //
+      // }
+
+      //         let Username = document.getElementById("username").value;
+
+      // if (Date == "") {
+
+      // }
+
+      let a = document.getElementById("gaurav").value;
+
+      function alert() {
+        //   console.log(r);
+        document.getElementById("gaurav").value = a.riverse;
+      }
+    </script>
+  </body>
+</html>
