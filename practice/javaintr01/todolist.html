@@ -11,21 +11,52 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      i {
+        color: rgb(0, 0, 0);
+      }
+    </style>
   </head>
   <body>
     <i class="fa-solid fa-heart" onclick="like()" id="click"></i>
 
     <script>
-      function like() {
-        let a = document.getElementById("click").value;
+      // function like() {
+      //   let a = document.getElementById("click").value;
 
-        if (a.type === "click") {
-          // userp.type="text";
-          document.getElementById("click").style.cssText = "color: red; ";
+      //   if (a.type === "click") {
+      //     // userp.type = "text";
+      //     document.getElementById("click").style.cssText = "color: red; ";
+      //   } else {
+      //     document.getElementById("click").style.CssText = "color: black; ";
+      //   }
+      // }
+
+      // function like() {
+      //   let b = document.getElementById("click").value;
+
+      //   if (a.type === "click") {
+      //     document.getElementById("click").style.cssText = "color: Red";
+      //   }
+      // }
+      let e = true;
+      function like() {
+        let a = document.getElementById("click");
+        // a.style.color = " black";
+
+        if (e) {
+          document.getElementById("click").style.color = "red";
         } else {
-          document.getElementById("click").style.cssText = "color: black; ";
+          document.getElementById("click").style.color = "black ";
         }
+        e = !e;
       }
+
+
+
+
+
+      addDigitsOfNumber ()
     </script>
   </body>
 </html>
